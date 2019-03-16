@@ -2,7 +2,7 @@ var app = require('http').createServer(handler)
 var io = require('socket.io')(app);
 var fs = require('fs');
 
-app.listen(80);
+app.listen(80,'127.0.0.1');
 
 function handler (req, res) {
   fs.readFile(__dirname + '/test.html',
